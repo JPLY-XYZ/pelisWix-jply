@@ -1,0 +1,9 @@
+{
+        "version": "1.0.0",
+        "changes": [
+            "Gestion de versiones funcional",
+            "Infinite scroll en listados",
+            "Añadida la nueva sección 'Ajustes'."
+        ],
+        "download_url": "https://github.com/TU_USUARIO/TU_REPO/releases/latest"
+    }
