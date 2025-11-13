@@ -33,8 +33,8 @@ function ActorPoster({ actor, smallPoster = false }) {
 
 
       <View className="mt-2 px-3 max-w-[85px]">
-        <Text className="font-bold">{actor.character}</Text>
-        <Text className="text-xs">{actor.name}</Text>
+        <Text className=" dark:text-white text-black font-bold">{actor.character}</Text>
+        <Text className=" dark:text-gray-500 text-black text-xs">{actor.name}</Text>
       </View>
     </View >
   );

@@ -30,7 +30,7 @@ function MovieHorizontalList({ movies, title, loadNextPage }) {
 
     return (
         <View>
-            <Text className="text-3xl font-bold px-4">{title}</Text>
+            <Text className="text-3xl font-bold px-4 text-black dark:text-white">{title}</Text>
             <FlatList
 
                 style={{ rowGap: 10, paddingBottom: 10, marginTop: 10 }}

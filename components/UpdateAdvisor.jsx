@@ -48,16 +48,16 @@ const UpdateAdvisor = () => {
                     backgroundColor: 'rgba(0, 0, 0, 0.5)'
                 }}
             >
-                <View className="w-4/5 max-w-sm bg-white rounded-xl p-6 shadow-xl">
-                    <Text className="text-xl font-bold text-gray-800 mb-2">
+                <View className="w-4/5 max-w-sm bg-white dark:bg-gray-600 rounded-xl p-6 shadow-xl">
+                    <Text className="text-xl font-bold text-gray-800  dark:text-white mb-2">
                         ACTUALIZACIÓN DISPONIBLE
                     </Text>
-                    <Text className="text-base text-gray-600 mb-6">
+                    <Text className="text-base text-gray-600 dark:text-white mb-6">
                         NUEVA VERSIÓN - {updateFile.version}
                     </Text>
                     
                     {updateFile.changes.map((change, index) => (
-                        <Text key={index} className="text-base text-gray-600 mb-2">
+                        <Text key={index} className="text-base text-gray-600 dark:text-white mb-2">
                             • {change}
                         </Text>
                     ))}
@@ -81,7 +81,7 @@ const UpdateAdvisor = () => {
                         className="w-full py-2 mt-2"
                         onPress={() => setModalVisible(false)}
                     >
-                        <Text className="text-gray-500 font-semibold text-center text-base">
+                        <Text className="text-gray-500 dark:text-white font-semibold text-center text-base">
                             Actualizar más tarde
                         </Text>
                     </TouchableOpacity>

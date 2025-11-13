@@ -9,7 +9,7 @@ const {height:screenHeigth} = useWindowDimensions();
         <>
             <View
                 style={{ height: screenHeigth * 0.7 }}
-                className="shadow-xl shadow-black">
+                className="shadow-xl shadow-black dark:shadow-white">
 
                 <View className="flex rounded-b-[25px] overflow-hidden">
                     <Image
@@ -21,8 +21,8 @@ const {height:screenHeigth} = useWindowDimensions();
 
             </View>
             <View className="px-5 mt-5">
-                <Text className="font-normal">{originalTitle}</Text>
-                <Text className="font-semibold text-2xl">{title}</Text>
+                <Text className="font-normal dark:text-gray-500 text-black">{originalTitle}</Text>
+                <Text className="font-semibold  dark:text-white text-black text-3xl">{title}</Text>
             </View>
         </>
     );

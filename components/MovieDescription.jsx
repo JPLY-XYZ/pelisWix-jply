@@ -13,15 +13,15 @@ function MovieDescription({ movie }) {
     return (
         <View className="mx-5">
             <View className="flex flex-row items-center">
-                <Text className="font-bold">
+                <Text className="font-bold text-black dark:text-white text-lg mr-3">
                     {movie.releaseDate} - {budgetFormatter.format(movie.budget)} $
                 </Text>
             </View>
             <View className="flex flex-row">
-                <Text>{movie.averageVote}</Text>
-                <Text>{movie.genres.join(', ')}</Text>
+                <Text className="dark:text-white text-black">{movie.averageVote}</Text>
+                <Text className="dark:text-white text-black">{movie.genres.join(', ')}</Text>
             </View>
-            <Text className="my-3">{movie.overview}</Text>
+            <Text className="my-3 dark:text-white text-black">{movie.overview}</Text>
 
         </View>
     );

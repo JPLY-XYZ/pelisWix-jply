@@ -1,9 +1,9 @@
 {
-        "version": "1.0.0",
+        "version": "1.1.0",
         "changes": [
-            "Gestion de versiones funcional",
-            "Infinite scroll en listados",
-            "Añadida la nueva sección 'Ajustes'."
+            "Mejoras en la interfaz de usuario",
+            "Corrección de errores en carga de datos",
+            "Modo oscuro implementado"
         ],
-        "download_url": "https://github.com/JPLY-XYZ/pelisWix-jply/releases/tag/1.0.0"
+        "download_url": "https://github.com/JPLY-XYZ/pelisWix-jply/releases/tag/1.1.0"
     }
