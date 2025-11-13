@@ -13,6 +13,7 @@ export default function RootLayout() {
     <SafeAreaProvider>
     <QueryClientProvider client={queryClient}>   
       <Stack>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="home/index" options={{ headerShown: false }} />
          <Stack.Screen name="movie/[id]" options={{ headerShown: false }} />
          <Stack.Screen name="settings/settings" options={{ headerShown: true, title:"Configuración" }} />

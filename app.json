@@ -1,8 +1,8 @@
 {
   "expo": {
-    "scheme": "my-app-scheme",
-    "name": "my-expo-app",
-    "slug": "my-expo-app",
+    "scheme": "peliswix",
+    "name": "PelisWix",
+    "slug": "peliswix",
     "version": "1.0.0",
     "web": {
       "favicon": "./assets/favicon.png",

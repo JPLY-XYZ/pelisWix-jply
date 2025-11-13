@@ -6,7 +6,7 @@ import { router, useLocalSearchParams } from "expo-router";
 
 import { useMovie } from "lib/hooks/useMovie";
 
-import { ActivityIndicator, Pressable, ScrollView, Text, useWindowDimensions, View } from "react-native";
+import { ActivityIndicator, Pressable, ScrollView, Text,  View } from "react-native";
 
 
 function MovieScreen() {
@@ -21,6 +21,10 @@ function MovieScreen() {
     return (<View className="flex-1 items-center justify-center bg-gray-100">
       <ActivityIndicator size="large" color="#0000ff" />
     </View>);
+  }
+
+  if (!movieDataQuery.data || !movieCastQuery.data) {
+      return <Text>No se pudo cargar la información.</Text>;
   }
 
   return (<>
@@ -40,7 +44,7 @@ function MovieScreen() {
       </View>
     </View>
     <ScrollView>
-      <MovieHeader uriPoster={movieDataQuery.data.posterPath} originalTitle={movieDataQuery.data.originalTitle} title={movieDataQuery.data.title} />
+      <MovieHeader uriPoster={movieDataQuery.data?.posterPath} originalTitle={movieDataQuery.data?.originalTitle} title={movieDataQuery.data?.title} />
       <MovieDescription movie={movieDataQuery.data} />
       <ActorHorizontalList cast={movieCastQuery.data} title={"Actores"} />
     </ScrollView>
