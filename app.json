@@ -32,6 +32,13 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.jply.xyz.peliswix"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "0d916a8d-c1e4-4dc3-a07e-191d181e4b25"
       }
     }
   }
