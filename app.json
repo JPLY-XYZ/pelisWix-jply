@@ -3,7 +3,7 @@
     "scheme": "peliswix",
     "name": "PelisWix",
     "slug": "peliswix",
-    "version": "1.1.0",
+    "version": "1.2.1",
     "web": {
       "favicon": "./assets/favicon.png",
       "bundler": "metro"
