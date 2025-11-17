@@ -2,7 +2,6 @@ import "../global.css";
 import { Stack } from 'expo-router';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { SafeAreaProvider } from "react-native-safe-area-context";
-// Importa AMBOS
 import { ThemeProvider, useTheme } from "../lib/context/ThemeContext";
 
 const queryClient = new QueryClient();
@@ -21,8 +20,11 @@ function AppStack() {
       }}
     >
       <Stack.Screen name="index" options={{ headerShown: false }} />
-      <Stack.Screen name="home/index" options={{ headerShown: false }} />
+      
+      <Stack.Screen name="(tabs)" options={{ headerShown: false }} /> 
+
       <Stack.Screen name="movie/[id]" options={{ headerShown: false }} />
+
       <Stack.Screen 
         name="settings/settings" 
         options={{ 
@@ -30,19 +32,22 @@ function AppStack() {
           title:"Configuración",
         }} 
       />
+      <Stack.Screen 
+        name="settings/authPage" 
+        options={{headerShown: false}} 
+      />
     </Stack>
   );
 }
-
 
 
 export default function RootLayout() {
   return (
     <SafeAreaProvider>
       <ThemeProvider> 
-        <QueryClientProvider client={queryClient}>   
+        <QueryClientProvider client={queryClient}>
           <AppStack /> 
-        </QueryClientProvider>   
+        </QueryClientProvider>  
       </ThemeProvider>
     </SafeAreaProvider>
   );

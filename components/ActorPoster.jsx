@@ -1,5 +1,4 @@
-import { router } from "expo-router";
-import { Image, Pressable, Text, View } from "react-native";
+import { Image, Text, View } from "react-native";
 
 function ActorPoster({ actor, smallPoster = false }) {
 
@@ -10,11 +9,7 @@ function ActorPoster({ actor, smallPoster = false }) {
     <View className="flex flex-col">
 
       <Image
-        source={
-    typeof actor.profilePath === 'string' // Si es un string...
-      ? { uri: actor.profilePath }        // ...úsalo como URL.
-      : actor.profilePath                // Si no (es el require/número), úsalo directamente.
-  }
+        source={{ uri: actor.profilePath }}
         style={{
           marginInline: smallPoster ? 5 : 0,
           borderRadius: 16,
@@ -29,8 +24,6 @@ function ActorPoster({ actor, smallPoster = false }) {
         }}
         resizeMode="cover"
       />
-
-
 
       <View className="mt-2 px-3 max-w-[85px]">
         <Text className=" dark:text-white text-black font-bold">{actor.character}</Text>

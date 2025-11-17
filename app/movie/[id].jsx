@@ -3,42 +3,23 @@ import ActorHorizontalList from "components/ActorHorizontalList";
 import MovieDescription from "components/MovieDescription";
 import MovieHeader from "components/MovieHeader";
 import { router, useLocalSearchParams } from "expo-router";
-import { useTheme } from "lib/context/ThemeContext";
+
 
 import { useMovie } from "lib/hooks/useMovie";
 
-import { ActivityIndicator, Pressable, ScrollView, Text, View } from "react-native";
+import { ActivityIndicator, Pressable, ScrollView, View } from "react-native";
 
 
 function MovieScreen() {
 
   const { id } = useLocalSearchParams();
 
-  const { theme } = useTheme();
-  const isDark = theme === 'dark';
-
   const { movieDataQuery, movieCastQuery } = useMovie(id);
 
-
-  if (movieDataQuery.isLoading && movieCastQuery.isLoading) {
+  if (!movieDataQuery.data || !movieCastQuery.data) {
     return (<View className="flex-1 items-center justify-center bg-gray-100 dark:bg-gray-800">
       <ActivityIndicator size="large" color="#0000ff" />
     </View>);
-  }
-
-   if (!movieDataQuery.data || !movieCastQuery.data) { 
-    return (<View className="flex-1 items-center justify-center bg-gray-100 dark:bg-gray-800"><Ionicons name="alert" size={40}
-      color={isDark ? "white" : "black"}
-      className="shadow" />
-      <Text className="text-black dark:text-white text-2xl mt-4">FALLO AL CARGAR DATOS</Text>
-      <Pressable
-        className="items-center mt-6 bg-gray-950/50 dark:bg-white/50 px-6 py-3 rounded-full"
-        onPress={() => router.dismiss()}>
-        <Ionicons name="home" size={40}
-          color={isDark ? "white" : "black"}
-          className="shadow" />
-        <Text className="text-black dark:text-white text-2xl mt-2">Volver al inicio</Text>
-      </Pressable></View>)
   }
 
   return (<>
