@@ -1,5 +1,5 @@
 {
-        "version": "1.2.0",
+        "version": "1.1.0",
         "changes": [
             "Mejoras en la interfaz de usuario",
             "Corrección de errores en carga de datos en pantalla películas",
@@ -9,4 +9,5 @@
         ],
         "download_url": "https://github.com/JPLY-XYZ/pelisWix-jply/releases/tag/1.2.0"
 }
+
 
