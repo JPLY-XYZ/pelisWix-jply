@@ -2,8 +2,15 @@
         "version": "1.1.0",
         "changes": [
             "Mejoras en la interfaz de usuario",
-            "Corrección de errores en carga de datos",
-            "Modo oscuro implementado"
+            "Corrección de errores en carga de datos en pantalla películas",
+            "Buscador implementado",
+            "Mejora en la visualización de imágenes y arreglos menores sobre ellas"
+                
         ],
         "download_url": "https://github.com/JPLY-XYZ/pelisWix-jply/releases/tag/1.1.0"
-    }
+}
+
+
+
+
+
